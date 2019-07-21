@@ -30,4 +30,4 @@ function moduleLogger(args) {
   return logger  
 }
 //
-module.exports = moduleLogger
+module.exports = { moduleLogger }
