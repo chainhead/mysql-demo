@@ -1,0 +1,457 @@
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:02 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:02 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:02 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:02 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:03 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:03 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:03 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:03 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:04 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:04 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:04 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:04 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:05 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:05 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:05 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:05 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:07 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:07 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:07 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:07 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:08 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:08 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:08 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:08 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:09 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:09 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:09 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:09 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:10 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:10 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:10 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:10 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:11 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:11 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:11 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:11 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:12 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:12 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:12 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:12 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:13 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:13 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:13 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:13 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:15 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:15 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:15 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:15 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:16 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:16 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:16 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:16 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:17 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:17 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:17 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:17 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:18 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:18 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:18 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:18 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:19 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:19 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:19 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:19 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:20 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:20 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:20 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:20 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:21 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:22 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:22 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:22 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:23 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:23 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:23 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:23 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:24 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:24 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:24 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:24 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+[ '/usr/local/Cellar/node/10.12.0/bin/node',
+  '/usr/local/lib/node_modules/pm2/lib/ProcessContainerFork.js',
+  '../../cfg/demo-1.json',
+  '../../cfg/mysql-connect.json',
+  '../../cfg/redis-connect.json' ]
+21/07/2019 08:42:25 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:25 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:25 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:25 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:26 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:26 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:26 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:26 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:27 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:27 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:27 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:27 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:28 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:28 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:28 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:28 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:30 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:30 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:30 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:30 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:31 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:31 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:31 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:31 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:32 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:32 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:32 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:32 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:33 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:33 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:33 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:33 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:46 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:47 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:47 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:47 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:48 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:48 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:48 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:48 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:49 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:49 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:49 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:49 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:50 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:50 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:50 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:50 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:51 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:51 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:51 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:51 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:52 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:52 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:52 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:52 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:53 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:53 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:53 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:53 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:55 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:55 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:55 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:55 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:56 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:56 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:56 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:56 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:57 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:57 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:57 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:57 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:58 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:58 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:58 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:58 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:42:59 - index.js - INFO - Checking received arguments.
+21/07/2019 08:42:59 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:42:59 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:42:59 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:00 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:00 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:00 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:00 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:01 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:01 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:01 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:01 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:03 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:03 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:03 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:03 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:04 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:04 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:04 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:04 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:05 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:05 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:05 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:05 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:06 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:06 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:06 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:06 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:07 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:07 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:07 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:07 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:08 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:08 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:08 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:08 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:09 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:09 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:09 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:09 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:11 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:11 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:11 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:11 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:12 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:12 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:12 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:12 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:13 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:13 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:13 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:13 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:14 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:14 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:14 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:14 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:15 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:15 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:15 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:15 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:16 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:16 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:16 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:16 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:17 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:17 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:17 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:17 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:19 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:19 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:19 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:19 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:20 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:20 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:20 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:20 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:21 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:21 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:21 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:21 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:22 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:22 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:22 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:22 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:23 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:23 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:23 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:23 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:24 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:24 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:24 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:24 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:25 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:25 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:25 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:25 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:27 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:27 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:27 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:27 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:28 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:28 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:28 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:28 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:29 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:29 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:29 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:29 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:30 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:30 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:30 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:30 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:31 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:31 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:31 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:31 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:32 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:32 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:32 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:32 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:33 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:33 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:33 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:33 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:34 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:34 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:35 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:35 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:36 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:36 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:36 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:36 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:37 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:37 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:37 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:37 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:38 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:38 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:38 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:38 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:39 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:39 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:39 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:39 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:40 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:40 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:40 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:40 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:41 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:41 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:41 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:41 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:43 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:43 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:43 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:43 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:44 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:44 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:44 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:44 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:45 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:45 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:45 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:45 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:46 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:46 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:46 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:46 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:47 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:47 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:47 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:47 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:48 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:48 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:48 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:48 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:49 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:49 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:49 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:49 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:51 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:51 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:51 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:51 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:52 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:52 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:52 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:52 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:53 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:53 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:53 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:53 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json
+21/07/2019 08:43:54 - index.js - INFO - Checking received arguments.
+21/07/2019 08:43:54 - index.js - INFO - Checking server configuration ../../cfg/demo-1.json
+21/07/2019 08:43:54 - index.js - INFO - Checking database configuration ../../cfg/mysql-connect.json
+21/07/2019 08:43:54 - index.js - INFO - Checking cache configuration ../../cfg/redis-connect.json

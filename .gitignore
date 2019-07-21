@@ -1,0 +1,7 @@
+csv/
+json/
+.vscode/
+node_modules/
+package*.json
+*connect.json
+.DS_Store
