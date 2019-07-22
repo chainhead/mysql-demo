@@ -1,24 +1,18 @@
 # Document
 
-Change bind IP address to `0.0.0.0` to allow remote connections.
-
-```python
-python buildcsv.py ../json/SEBIEquityBrokers.json ../csv/SEBIEquityBrokers.csv ../csv/keys.csv
-```
-
 ## Base installation
 
 ```bash
-git clone
-cd mysql-demo
-./baseinstall.sh
+git clone https://github.com/chainhead/mysql-demo.git
+cd mysql-demo/sh
+./baseinstall.sh 1> install.log 2> install.err
 ```
 
 ## Server configuration
 
 ### Nginx
 
-`../cfg/lb.cfg`
+`../cfg/nginx.conf`
 
 ### NodeJS
 

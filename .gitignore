@@ -3,6 +3,5 @@ json/
 log/
 .vscode/
 node_modules/
-package*.json
-*connect.json
+package-lock.json
 .DS_Store
