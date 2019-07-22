@@ -11,7 +11,21 @@ sudo apt install -y sysbench
 ### Products installation
 ## NGINX
 sudo apt install -y nginx 
-sudo ufw allow 'Nginx HTTP'
+## NodeJS
+#  1. Download setup script
+cd /tmp
+curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+#  2. Refresh package cache
+sudo bash nodesource_setup.sh
+#  3. Install NodeJS
+sudo apt-get install -y nodejs 
+#  4. Install pre-requsites that maybe required for some packages
+sudo apt install -y build-essential
+##
+## NPM installations
+npm i pm2 -g 
+pm2 install pm2-logrotate
+##
 ## MySQL
 # Download .deb package
 #  This installation will use the .deb file from the MySQL website. 
@@ -44,23 +58,9 @@ curl -OL https://github.com/sysown/proxysql/releases/download/v2.0.5/proxysql_2.
 sudo dpkg -i proxysql_2.0.5-clickhouse-ubuntu18_amd64.deb
 # 3. Start service
 sudo service proxysql start
+cd 
 ##
 ## Redis
 sudo apt install -y redis-server
 sudo systemctl restart redis.service
-##
-## NodeJS
-#  1. Download setup script
-cd /tmp
-curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
-#  2. Refresh package cache
-sudo bash nodesource_setup.sh
-#  3. Install NodeJS
-sudo apt-get install -y nodejs 
-#  4. Install pre-requsites that maybe required for some packages
-sudo apt install -y build-essential
-##
-## NPM installations
-npm i pm2 -g 
-pm2 install pm2-logrotate
 ##
