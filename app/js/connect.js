@@ -29,13 +29,11 @@ function doConnect(dbConfig, cacheConfig, callback) {
     //
     connectDb(dbConfig, (err, res) => {
         if (err) {
-            logger.error('%s', err.msg)
             return callback('err', null)
         } else {
             dbConn = res
             connectCache(cacheConfig, (err, res) => {
                 if (err) {
-                    logger.error('%s', err.msg)
                     return callback('err', null)
                 } else {
                     cacheConn = res
