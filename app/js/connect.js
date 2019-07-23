@@ -7,12 +7,13 @@ const logger = moduleLogger.moduleLogger(MODULE)
 const db = require('./db')
 //
 function connectDb(config, callback) {
+    // C001
     db.connect(config, (err, res) => {
         if (err) {
-            logger.error('Database connection error. Code: %s Number: %d SQLSTATE: %s', err.code, err.errno, err.sqlState)
+            logger.error('C001 - Code: %s Number: %d SQLSTATE: %s Message: %s', err.code, err.errno, err.sqlState, err.sqlMessage)
             return callback(err, null)
         } else {
-            logger.info('Database connected. Code: %s Number: %d SQLSTATE: %s', err.code, err.errno, err.sqlState)
+            logger.info('C001 - Code: %s Number: %d SQLSTATE: %s Message: %s', err.code, err.errno, err.sqlState, err.sqlMessage)
             return callback(null, res)
         }
     })
