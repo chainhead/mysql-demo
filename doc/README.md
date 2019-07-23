@@ -37,11 +37,12 @@ mysql -u root -p < ${PROJECT_HOME}/sql/install.sql
 
 ## Configuration - ProxySQL
 
-- Edit `${PROJECT_HOME}/conf/proxysql.cfg` to change passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
+- Edit `${PROJECT_HOME}/conf/proxysql.conf` to change passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
 
 ```bash
-sudo mkdir -p /data/proxysql/proxy01
-proxysql -c ${PROJECT_HOME}/conf/proxysql.cfg
+sudo cp /etc/proxysql.cnf ${PROJECT_HOME}/conf/proxysql.cnf.backup
+sudo cp ${PROJECT_HOME}/conf/proxysql.conf /etc/proxysql.conf
+sudo proxysql service restart
 ```
 
 ## Configuration - Redis

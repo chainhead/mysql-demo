@@ -8,7 +8,14 @@ const db = require('./db')
 //
 function connectDb(config, callback) {
     // C001
-    db.connect(config, (err, res) => {
+    var options = {
+        host: config.host,
+        port: config.port,
+        user: config.user,
+        password: config.password,
+        database: config.database
+    }
+    db.connect(options, (err, res) => {
         if (err) {
             logger.error('C001 - Code: %s Number: %d SQLSTATE: %s Message: %s', err.code, err.errno, err.sqlState, err.sqlMessage)
             return callback(err, null)
