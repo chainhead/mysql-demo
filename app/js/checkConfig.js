@@ -10,7 +10,7 @@ function serverConfiguration(configFile, callback) {
     try {
         config = JSON.parse(fs.readFileSync(configFile))
     } catch (e) {
-        return (e,null)
+        return callback(e,null)
     }
     //
     // TODO: Check for mandatory fields
@@ -24,7 +24,7 @@ function dbConfiguration(configFile, callback) {
     try {
         config = JSON.parse(fs.readFileSync(configFile))
     } catch (e) {
-        return (e,null)
+        return callback(e,null)
     }
     //
     // TODO: Check for mandatory fields
@@ -38,7 +38,7 @@ function cacheConfiguration(configFile, callback) {
     try {
         config = JSON.parse(fs.readFileSync(configFile))
     } catch (e) {
-        return (e,null)
+        return callback(e,null)
     }
     //
     // TODO: Check for mandatory fields

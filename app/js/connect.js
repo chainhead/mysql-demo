@@ -4,9 +4,18 @@ const moduleLogger = require('./logger')
 const MODULE = path.basename(__filename)
 const logger = moduleLogger.moduleLogger(MODULE)
 //
+const db = require('./db')
+//
 function connectDb(config, callback) {
-    logger.info('Database connected successfully.')
-    return callback(null, null)
+    db.connect(config, (err, res) => {
+        if (err) {
+            logger.error('Database connection error. Code: %s Number: %d SQLSTATE: %s', err.code, err.errno, err.sqlState)
+            return callback(err, null)
+        } else {
+            logger.info('Database connected. Code: %s Number: %d SQLSTATE: %s', err.code, err.errno, err.sqlState)
+            return callback(null, res)
+        }
+    })
 }
 //
 function connectCache(config, callback) {
