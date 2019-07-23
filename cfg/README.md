@@ -1,6 +1,6 @@
 # Introduction
 
-This document describes the configuration files required for this project. **DO NOT EDIT ANY FILE IN THIS FOLDER.**
+This document describes the configuration files required for this project. **DO NOT EDIT ANY FILE IN THIS FOLDER.** The files in this folder are for reference only.
 
 ## Configuration files
 
@@ -14,36 +14,9 @@ Each set of configuration files is detailed below.
 - *Product configuration*
   - Load balancing - `nginx.conf`
   - MySQL configuration - `msysql-config.json`
+  - ProxySQL configuration - `proxysql.cfg`
   - Redis configuration - `redis-config.json`
   - NodeJS configuration - `demo-*.json`
 - *Connection configuration*
   - MySQL connection - `mysql-connect.json`
   - Redis connection - `redis-connect.json`
-
-## Set-up configuration
-
-- Create a folder for storing the configuration files _outside_ this project e.g. `$HOME/config`. Note this folder name as we will be referring this again.
-
-```bash
-cd $HOME
-mkdir config
-```
-
-- Copy all the configuration files to this folder for editing.
-
-```bash
-cd $HOME/config
-cp $HOME/mysql-demo/cfg/*.* $HOME/config
-```
-
-## Editing the configuration
-
-To minimize the changes in configuration, only the following files need to be changed.
-
-### MySQL connection
-
-- Edit the `password` field in the `mysql-connect.json` file to the same value as set in the `CREATE USER` DDL in the `sql/install.sql` file.
-
-### Redis connection
-
-- Edit the `password` field in the `redis-connect.json` file to the same value as set in the ...

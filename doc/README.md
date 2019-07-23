@@ -1,52 +1,57 @@
 # Document
 
-## Base installation
+## Installation
+
+- The following products will be installed:
+  - Nginx
+  - NodeJs and required `npm` packages
+  - MySQL
+  - ProxySQL
+- The installation of MySQL is interactive and the following needs to be input when installing.
+  - Configuring `mysql-apt-config`. Scroll down to last option and hit `Enter`.
+  - Root password. Enter a strong password and note it down somewhere safe. It will be required again.
+  - Configuring `mysql-community-server`. Select the option for strong password encryption.
+- Begin installation by running the commands shown below.
 
 ```bash
 git clone https://github.com/chainhead/mysql-demo.git
-cd mysql-demo/sh
-./baseinstall.sh 1> install.log 2> install.err
+$HOME/mysql-demo/sh/baseinstall.sh
 ```
 
-## Server configuration
+## Configuration - Nginx
 
-### Nginx
-
-`../cfg/nginx.conf`
-
-### NodeJS
-
-`../cfg/demo-1.json`
-`../cfg/demo-2.json`
-`../cfg/demo-3.json`
-`../cfg/demo-4.json`
-
-### `pm2`
+- Configure Nginx by running the commands below.
 
 ```bash
-cd app
-pm2 -n demo-1 -o ../../log/demo-1.log -e ../../log/demo-1.err start index.js -- ../../cfg/demo-1.json ../../cfg/mysql-connect.json ../../cfg/redis-connect.json
-pm2 logrotate
-pm2 save
+$HOME/mysql-demo/sh/baseconfig.sh
 ```
 
-### MySQL configuration
+## Configuration - MySQL
 
-### MySQL table set-up
-
-### `ProxySQL` set-up
-
-### Redis configuration
-
-## Application configuration
-
-To convert JSON data into CSV for upload into tables, place the JSON file (`SEBIEquityBrokers.json`) into `json` folder and run the commands below.
-
-### Data preparation
+- Edit `${PROJECT_HOME}/sql/install.sql` to change passwords.
+- Run the command below. Enter root password as provided during installation of MySQL.
 
 ```bash
-cd py
-python buildcsv.py ../json/SEBIEquityBrokers.json ../csv/SEBIEquityBrokers.csv ../csv/keys.csv
+mysql -u root -p < ${PROJECT_HOME}/sql/install.sql
 ```
 
-### Data load
+## Configuration - ProxySQL
+
+- Edit `${PROJECT_HOME}/cfg/proxysql.cfg` to change passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
+
+```bash
+sudo mkdir -p /data/proxysql/proxy01
+proxysql -c ${PROJECT_HOME}/cfg/proxysql.cfg --datadir /data/proxysql/proxy01
+```
+
+## Configuration - Redis
+
+## Configuration - NodeJS
+
+Connection files
+
+## Launch
+
+```bash
+./launch.sh
+```
