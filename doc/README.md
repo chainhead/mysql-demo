@@ -15,7 +15,7 @@
 
 ```bash
 git clone https://github.com/chainhead/mysql-demo.git
-$HOME/mysql-demo/sh/baseinstall.sh
+$HOME/mysql-demo/sh/install.sh
 ```
 
 ## Configuration - Nginx
@@ -23,7 +23,7 @@ $HOME/mysql-demo/sh/baseinstall.sh
 - Configure Nginx by running the commands below.
 
 ```bash
-$HOME/mysql-demo/sh/baseconfig.sh
+$HOME/mysql-demo/sh/config.sh
 ```
 
 ## Configuration - MySQL
@@ -41,7 +41,7 @@ mysql -u root -p < ${PROJECT_HOME}/sql/install.sql
 
 ```bash
 sudo mkdir -p /data/proxysql/proxy01
-proxysql -c ${PROJECT_HOME}/cfg/proxysql.cfg --datadir /data/proxysql/proxy01
+proxysql -c ${PROJECT_HOME}/conf/proxysql.cfg
 ```
 
 ## Configuration - Redis
@@ -53,5 +53,5 @@ Connection files
 ## Launch
 
 ```bash
-./launch.sh
+$HOME/mysql-demo/sh/launch.sh
 ```

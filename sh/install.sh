@@ -73,10 +73,3 @@ sudo apt install -y mysql-server
 #  5. Check install status
 sudo systemctl status mysql.service
 ##
-#  Set-up exports for use in later scripts
-export PROJECT_SRC=$HOME/mysql-demo
-export APP_SRC=${PROJECT_SRC}/app
-echo 'export PROJECT_SRC=$HOME/mysql-demo' >> .profile
-echo 'export APP_SRC=${PROJECT_SRC}/app' >> .profile
-cp ${PROJECT_SRC}/cfg/* ${PROJECT_HOME}/conf
-cp ${PROJECT_SRC}/sql/* ${PROJECT_HOME}/sql
