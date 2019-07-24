@@ -28,6 +28,16 @@ $HOME/mysql-demo/sh/config.sh
 - Copy them to `${PROJECT_HOME}/certs`.
 - Set permissions of the files as `chmod 404 server.*`.
 
+### Key generation
+
+Using the commands below, a self-signed certificate can be created. However, in production systems, self-signed certificates should *NOT* be used.
+
+```bash
+openssl req -newkey rsa:2048 -new -nodes -keyout server.pem -out csr.pem
+openssl x509 -req -days 365 -in csr.pem -signkey server.pem -out server.crt
+chmod 404 server.*
+```
+
 ## Configuration - Nginx
 
 - Configure Nginx by running the commands below.
