@@ -30,6 +30,7 @@ $HOME/mysql-demo/sh/lb.sh
 
 ## Configuration - MySQL
 
+- Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
 - Edit `${PROJECT_HOME}/sql/install.sql` to change passwords.
 - Run the command below. Enter root password as provided during installation of MySQL.
 
@@ -39,6 +40,7 @@ mysql -u root -p < ${PROJECT_HOME}/sql/install.sql
 
 ## Configuration - ProxySQL
 
+- Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
 - Edit `${PROJECT_HOME}/conf/proxysql.conf` to change passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
 
 ```bash
@@ -49,6 +51,7 @@ $HOME/mysql-demo/sh/proxy.sh
 
 ## Configuration - NodeJS
 
+- Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
 - Edit `${PROJECT_HOME}/conf/mysql-connect-*.json` to enter passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
 
 ## Launch
