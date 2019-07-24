@@ -21,7 +21,7 @@ init.validateArgs(process.argv, (err, res) => {
                 process.exit(8)
             } else {
                 logger.info('Connections completed.')
-                app.launchServer(serverConfig, (err, res) => {
+                app.launchServer(serverConfig, res, (err, res) => {
                     if (err) {
                         process.exit(8)
                     } else {

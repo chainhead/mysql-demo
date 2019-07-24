@@ -39,8 +39,8 @@ function doConnect(dbConfig, cacheConfig, callback) {
                 } else {
                     cacheConn = res
                     return callback(null, {
-                        db: dbConn,
-                        cache: cacheConn
+                        dbConn: dbConn,
+                        cacheConn: cacheConn
                     })
                 }
             })
