@@ -28,7 +28,10 @@ demoRouter.get('/demo', function (req, res, next) {
             j = JSON.stringify({e:'err'})
             res.send(j)
         } else {
-            j = JSON.stringify({ a: resp[0].resp })
+            j = JSON.stringify({
+                r : resp.res[0].Dummy,
+                f : resp.fields[0]
+            })
             res.status(200)
             res.send(j)
         }

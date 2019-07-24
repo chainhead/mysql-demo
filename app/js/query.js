@@ -1,6 +1,6 @@
 //
 function q0001(dbConn, options, callback) {
-    var query = 'SELECT 1 as resp';
+    var query = 'SELECT 1 as Dummy';
     dbConn.query(query, (err, res, fields) => {
         if (err) {
             return callback(err, null)
