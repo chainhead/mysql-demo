@@ -48,18 +48,22 @@ for x in j:
     s = ''
     jsonKeys = sorted(x)
     for k in jsonKeys:
-        s += str(x[k]) + '|'
+        s += str(x[k]).strip() + '|'
         #
     validity = x['validity']
     p = validity.split('-')
-    validity_from = p[0]
-    validity_to = ''
+    validity_f = p[0].strip()
+    validity_t = ''
     if (p[1].strip() == 'Perpetual'):
-        validity_to = 'Dec 31, 9999'
+        validity_t = 'Dec 31, 9999'
     else:
-        validity_to = p[1]
+        validity_t = p[1]
         #
     #
+    vf = datetime.datetime.strptime(validity_f, '%b %d, %Y')
+    validity_from = datetime.datetime.strftime(vf, '%Y-%m-%d 00:00:00')
+    vt = datetime.datetime.strptime(validity_t, '%b %d, %Y')
+    validity_to = datetime.datetime.strftime(vt, '%Y-%m-%d 00:00:00')
     s += validity_from + '|' + validity_to + os.linesep
     fc.write(s)
 #

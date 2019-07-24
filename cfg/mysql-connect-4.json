@@ -1,0 +1,6 @@
+{
+    "socketPath" : "/var/run/mysqld/mysqld.sock",
+    "user" : "demo4",
+    "password" : "",
+    "database" : "BROKERS"
+}

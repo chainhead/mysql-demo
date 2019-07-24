@@ -4,9 +4,19 @@ const moduleLogger = require('./logger')
 const MODULE = path.basename(__filename)
 const logger = moduleLogger.moduleLogger(MODULE)
 //
+const db = require('./db')
+//
 function connectDb(config, callback) {
-    logger.info('Database connected successfully.')
-    return callback(null, null)
+    // C001
+    db.connect(config, (err, res) => {
+        if (err) {
+            logger.error('C001 - Code: %s Number: %d SQLSTATE: %s Message: %s', err.code, err.errno, err.sqlState, err.sqlMessage)
+            return callback(err, null)
+        } else {
+            logger.info('C001 - Connected. Connection id %d', res.threadId)
+            return callback(null, res)
+        }
+    })
 }
 //
 function connectCache(config, callback) {
@@ -20,19 +30,17 @@ function doConnect(dbConfig, cacheConfig, callback) {
     //
     connectDb(dbConfig, (err, res) => {
         if (err) {
-            logger.error('%s', err.msg)
             return callback('err', null)
         } else {
             dbConn = res
             connectCache(cacheConfig, (err, res) => {
                 if (err) {
-                    logger.error('%s', err.msg)
                     return callback('err', null)
                 } else {
                     cacheConn = res
                     return callback(null, {
-                        db: dbConn,
-                        cache: cacheConn
+                        dbConn: dbConn,
+                        cacheConn: cacheConn
                     })
                 }
             })

@@ -1,3 +1,4 @@
+#!/bin/bash
 ### OS Management
 ##
 # Update and upgrade distribution
@@ -6,8 +7,6 @@ sudo apt-get -y upgrade
 ##
 # Update time zone to IST
 sudo timedatectl set-timezone Asia/Kolkata
-# Install bench marking tool
-sudo apt install -y sysbench
 ### Products installation
 ## NGINX
 sudo apt install -y nginx 
@@ -23,8 +22,21 @@ sudo apt-get install -y nodejs
 sudo apt install -y build-essential
 ##
 ## NPM installations
-npm i pm2 -g 
+sudo npm i pm2 -g 
 pm2 install pm2-logrotate
+##
+## ProxySQL proxy
+# 1. Download latest .deb from here https://github.com/sysown/proxysql/releases/tag/v2.0.5
+cd /tmp
+curl -OL https://github.com/sysown/proxysql/releases/download/v2.0.5/proxysql_2.0.5-clickhouse-ubuntu18_amd64.deb
+# 2. Install the package
+sudo dpkg -i proxysql_2.0.5-clickhouse-ubuntu18_amd64.deb
+# 3. Start service
+sudo service proxysql start
+##
+## Redis
+sudo apt install -y redis-server
+sudo systemctl restart redis.service
 ##
 ## MySQL
 # Download .deb package
@@ -42,25 +54,11 @@ sudo dpkg -i mysql-apt-config_0.8.13-1_all.deb
 #  3. Refresh apt repository
 sudo apt update
 #  4. Install MySQL server
-#     - Enter root password - Root.Password
-#     - Use Legacy Authentication method
+#     - Set root password and save it somewhere secure.
+#     - Use strong authentication option.
 sudo apt install -y mysql-server
-#     - Often, the next step is to enable password validation plugin. If required, the following command maybe run.
+#  Often, the next step is to enable password validation plugin. If required, the following command maybe run.
 # sudo mysql_secure_installation
 #  5. Check install status
 sudo systemctl status mysql.service
-##
-## MySQL proxy
-# 1. Download latest .deb from here https://github.com/sysown/proxysql/releases/tag/v2.0.5
-cd /tmp
-curl -OL https://github.com/sysown/proxysql/releases/download/v2.0.5/proxysql_2.0.5-clickhouse-ubuntu18_amd64.deb
-# 2. Install the package
-sudo dpkg -i proxysql_2.0.5-clickhouse-ubuntu18_amd64.deb
-# 3. Start service
-sudo service proxysql start
-cd 
-##
-## Redis
-sudo apt install -y redis-server
-sudo systemctl restart redis.service
 ##

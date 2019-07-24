@@ -8,9 +8,10 @@ const logger = moduleLogger.moduleLogger(MODULE)
 //
 const demo = require('./demo')
 //
-function launchServer(config, callback) {
+function launchServer(config, conn, callback) {
     const app = express()
-    app.use(demo)
+    demo.connSetup(conn)
+    app.use(demo.demoRouter)
     var server = http.createServer(app).listen(config.port)
     //
     server.on('error', (e) => {
