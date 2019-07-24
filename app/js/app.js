@@ -11,7 +11,7 @@ const demo = require('./demo')
 function launchServer(config, conn, callback) {
     const app = express()
     demo.connSetup(conn)
-    app.use(demo.demo)
+    app.use(demo.demoRouter)
     var server = http.createServer(app).listen(config.port)
     //
     server.on('error', (e) => {
