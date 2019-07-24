@@ -19,7 +19,7 @@ function launchServer(config, conn, callback) {
         return callback(e, null)
     })
     logger.info('Server launched at port %d', config.port)
-    return callback(null, null)
+    //return callback(null, null)
 }
 //
 module.exports = {
