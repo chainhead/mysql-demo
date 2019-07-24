@@ -1,3 +1,4 @@
+#!/bin/bash
 ### OS Management
 ##
 # Update and upgrade distribution
@@ -6,18 +7,6 @@ sudo apt-get -y upgrade
 ##
 # Update time zone to IST
 sudo timedatectl set-timezone Asia/Kolkata
-### Environment variables and folder creation
-##
-#  1. Set-up environment variables
-export PROJECT_HOME=$HOME/project-mysql-demo 
-echo 'export PROJECT_HOME=$HOME/project-mysql-demo' >> .profile
-#  2. Folders required for further configuration
-mkdir ${PROJECT_HOME}
-mkdir ${PROJECT_HOME}/logs
-mkdir ${PROJECT_HOME}/conf
-mkdir ${PROJECT_HOME}/sql
-mkdir ${PROJECT_HOME}/etc
-#
 ### Products installation
 ## NGINX
 sudo apt install -y nginx 
@@ -36,7 +25,7 @@ sudo apt install -y build-essential
 sudo npm i pm2 -g 
 pm2 install pm2-logrotate
 ##
-## MySQL proxy
+## ProxySQL proxy
 # 1. Download latest .deb from here https://github.com/sysown/proxysql/releases/tag/v2.0.5
 cd /tmp
 curl -OL https://github.com/sysown/proxysql/releases/download/v2.0.5/proxysql_2.0.5-clickhouse-ubuntu18_amd64.deb

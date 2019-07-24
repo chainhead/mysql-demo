@@ -41,7 +41,7 @@ mysql -u root -p < ${PROJECT_HOME}/sql/install.sql
 
 ```bash
 sudo cp /etc/proxysql.cnf ${PROJECT_HOME}/conf/proxysql.cnf.backup
-sudo cp ${PROJECT_HOME}/conf/proxysql.conf /etc/proxysql.conf
+sudo cp ${PROJECT_HOME}/conf/proxysql.conf /etc/proxysql.cnf
 sudo proxysql service restart
 ```
 
@@ -49,7 +49,7 @@ sudo proxysql service restart
 
 ## Configuration - NodeJS
 
-Connection files
+- Edit `${PROJECT_HOME}/conf/mysql-connect-*.json` to enter passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
 
 ## Launch
 

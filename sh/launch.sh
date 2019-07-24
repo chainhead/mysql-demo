@@ -1,3 +1,5 @@
+#!/bin/bash
+source $HOME/mysql-demo/sh/source.sh
 # Install the application and its dependencies
 cd ${APP_SRC}
 npm i 

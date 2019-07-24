@@ -8,19 +8,12 @@ const db = require('./db')
 //
 function connectDb(config, callback) {
     // C001
-    var options = {
-        host: config.host,
-        port: config.port,
-        user: config.user,
-        password: config.password,
-        database: config.database
-    }
-    db.connect(options, (err, res) => {
+    db.connect(config, (err, res) => {
         if (err) {
             logger.error('C001 - Code: %s Number: %d SQLSTATE: %s Message: %s', err.code, err.errno, err.sqlState, err.sqlMessage)
             return callback(err, null)
         } else {
-            logger.info('C001 - Code: %s Number: %d SQLSTATE: %s Message: %s', err.code, err.errno, err.sqlState, err.sqlMessage)
+            logger.info('C001 - Connected. Connection id %d', res.threadId)
             return callback(null, res)
         }
     })
