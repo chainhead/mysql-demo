@@ -1,7 +1,7 @@
 const path = require('path')
 //
 const express = require('express');
-const demo = express.Router();
+const demoRouter = express.Router();
 //
 const moduleLogger = require('./logger')
 const MODULE = path.basename(__filename)
@@ -17,7 +17,7 @@ function connSetup(conn) {
     cacheConn = conn.cacheConn
 }
 //
-demo.get('/demo', function (req, res, next) {
+demoRouter.get('/demo', function (req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     //
     let j
@@ -27,9 +27,9 @@ demo.get('/demo', function (req, res, next) {
         } else {
             res.status(200)
             j = JSON.stringify({ a: res[0].resp })
+            res.send(j)
         }
     })
-    res.send(j)
 })
 //
-module.exports = { demo, connSetup };
+module.exports = { demoRouter, connSetup };
