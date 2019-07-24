@@ -24,6 +24,9 @@ demoRouter.get('/demo', function (req, res, next) {
     qry.q0001(dbConn, null, (err, resp) => {
         if (err) {
             logger.error('Q0001  Code: %s Number: %d SQLSTATE: %s Message: %s', err.code, err.errno, err.sqlState, err.sqlMessage)
+            res.status(502)
+            j = JSON.stringify({e:'err'})
+            res.send(j)
         } else {
             j = JSON.stringify({ a: resp[0].resp })
             res.status(200)
