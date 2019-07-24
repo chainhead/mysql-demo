@@ -21,12 +21,12 @@ demoRouter.get('/demo', function (req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     //
     let j
-    qry.q0001(dbConn, null, (err, res) => {
+    qry.q0001(dbConn, null, (err, resp) => {
         if (err) {
             logger.error('Q0001  Code: %s Number: %d SQLSTATE: %s Message: %s', err.code, err.errno, err.sqlState, err.sqlMessage)
         } else {
+            j = JSON.stringify({ a: resp[0].resp })
             res.status(200)
-            j = JSON.stringify({ a: res[0].resp })
             res.send(j)
         }
     })
