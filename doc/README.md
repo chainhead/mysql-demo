@@ -20,6 +20,14 @@ $HOME/mysql-demo/sh/install.sh
 $HOME/mysql-demo/sh/config.sh
 ```
 
+## SSL termination for Nginx
+
+- Upload certificates for Nginx to support SSL termination.
+- Create the public key with name as `server.crt`.
+- Create its private key with name as `server.key`.
+- Copy them to `${PROJECT_HOME}/certs`.
+- Set permissions of the files as `chmod 404 server.*`.
+
 ## Configuration - Nginx
 
 - Configure Nginx by running the commands below.
