@@ -12,10 +12,12 @@
   - Root password. Enter a strong password and note it down somewhere safe. It will be required again.
   - Configuring `mysql-community-server`. Select the option for strong password encryption.
 - Begin installation by running the commands shown below.
+- Post installation, do basic configuration
 
 ```bash
 git clone https://github.com/chainhead/mysql-demo.git
 $HOME/mysql-demo/sh/install.sh
+$HOME/mysql-demo/sh/config.sh
 ```
 
 ## Configuration - Nginx
@@ -23,7 +25,7 @@ $HOME/mysql-demo/sh/install.sh
 - Configure Nginx by running the commands below.
 
 ```bash
-$HOME/mysql-demo/sh/config.sh
+$HOME/mysql-demo/sh/lb.sh
 ```
 
 ## Configuration - MySQL
@@ -40,9 +42,7 @@ mysql -u root -p < ${PROJECT_HOME}/sql/install.sql
 - Edit `${PROJECT_HOME}/conf/proxysql.conf` to change passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
 
 ```bash
-sudo cp /etc/proxysql.cnf ${PROJECT_HOME}/conf/proxysql.cnf.backup
-sudo cp ${PROJECT_HOME}/conf/proxysql.conf /etc/proxysql.cnf
-sudo proxysql service restart
+$HOME/mysql-demo/sh/proxy.sh
 ```
 
 ## Configuration - Redis
