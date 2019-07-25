@@ -12,6 +12,8 @@ const qry = require('./query')
 let dbConn
 let cacheConn
 //
+const demo = express.Router()
+//
 function connSetup(conn) {
     dbConn = conn.dbConn
     cacheConn = conn.cacheConn
@@ -94,4 +96,4 @@ demo.get('/regnum/:id', (req, res, next) => {
 //
 // Get broker details based on filters in body.
 // 
-module.exports = { demoRouter, connSetup };
+module.exports = { demo, connSetup };
