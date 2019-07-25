@@ -28,7 +28,7 @@ demo.get('/demo', (req, res, next) => {
         if (err) {
             logger.error('Q0001 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sqlMessage)
             res.status(502)
-            j = JSON.stringify({ e: 'err' })
+            j = JSON.stringify({})
             res.send(j)
         } else {
             logger.info('Q0001 - Request ID: %s', req.header('X-Nginx-header'))
@@ -53,13 +53,12 @@ demo.get('/regnum', (req, res, next) => {
         if (err) {
             logger.error('Q0002 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sqlMessage)
             res.status(502)
-            j = JSON.stringify({ e: 'err' })
+            j = JSON.stringify({})
             res.send(j)
         } else {
             logger.info('Q0002 - Request ID: %s', req.header('X-Nginx-header'))
             j = JSON.stringify({
-                r: resp.res,
-                f: resp.fields
+                r: resp.res
             })
             res.status(200)
             res.send(j)
@@ -78,13 +77,12 @@ demo.get('/regnum/:id', (req, res, next) => {
         if (err) {
             logger.error('Q0003 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sqlMessage)
             res.status(502)
-            j = JSON.stringify({ e: 'err' })
+            j = JSON.stringify({})
             res.send(j)
         } else {
             logger.info('Q0003 - Request ID: %s', req.header('X-Nginx-header'))
             j = JSON.stringify({
-                r: resp.res,
-                f: resp.fields
+                r: resp.res
             })
             res.status(200)
             res.send(j)
