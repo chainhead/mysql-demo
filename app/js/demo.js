@@ -44,7 +44,7 @@ demo.get('/demo', (req, res, next) => {
 //
 // Get broker details of all brokers.
 // 
-demo.get('/regnum', (req, res, next) => {
+demo.get('/regnums', (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('X-Request-Id', req.header('X-Nginx-header'))
     //
@@ -91,5 +91,21 @@ demo.get('/regnum/:id', (req, res, next) => {
 })
 //
 // Get broker details based on filters in body.
-// 
+//
+demo.get('/regnum', (req, res, nect) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('X-Request-Id', req.header('X-Nginx-header'))
+    //
+    let j
+    if (req.body) {
+        j = JSON.stringify(req.body)
+        res.status(200)
+        res.send(j)
+    } else {
+        j = JSON.stringify({})
+        res.status(400)
+        res.send(j)
+    }
+})
+//
 module.exports = { demo, connSetup };
