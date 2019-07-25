@@ -135,11 +135,11 @@ demo.get('/regnum', (req, res, next) => {
                     }
                 }
                 options = options.slice(0, -4)
-                j = JSON.stringify({
+                let opts = {
                     list: options
-                })
+                }
                 //
-                qry.q0004(dbConn, options, (err, resp) => {
+                qry.q0004(dbConn, opts, (err, resp) => {
                     if (err) {
                         logger.error('Q0004 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sqlMessage)
                         res.status(502)
