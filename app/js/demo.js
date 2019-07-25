@@ -114,7 +114,7 @@ demo.get('/regnum', (req, res, next) => {
                         for (j=0;j<cols.length;++j) {
                             s += "'" + cols[j] + "',"
                         }
-                        s.slice(0,-1)
+                        s = s.slice(0,-1)
                         s += ') AND '
                         options += s
                     } else {
@@ -129,9 +129,9 @@ demo.get('/regnum', (req, res, next) => {
                     j = JSON.stringify({
                         list : options
                     })
-                    res.status(200)
-                    res.send(j)
                 }
+                res.status(200)
+                res.send(j)
             } else {
                 // Number of filters is zero
                 j = JSON.stringify({
