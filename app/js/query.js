@@ -45,7 +45,7 @@ function q0003(dbConn, options, callback) {
 //
 function q0004(dbConn, options, callback) {
     var q = 'SELECT REGISTRATION_NUM, BROKER_NAME, BROKER_TYPE, TRADE_NAME, EXCHANGE_NAME, EMAIL_ADDRESS, BROKER_ADDRESS from '
-        + ' BROKERS.BROKER_DETAILS where ';
+        + ' BROKERS.BROKER_DETAILS where ' + options.list;
     dbConn.query(q, [options], (err, res, fields) => {
         if (err) {
             return callback(err, null)
