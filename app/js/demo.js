@@ -92,17 +92,63 @@ demo.get('/regnum/:id', (req, res, next) => {
 //
 // Get broker details based on filters in body.
 //
-demo.get('/regnum', (req, res, nect) => {
+demo.get('/regnum', (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('X-Request-Id', req.header('X-Nginx-header'))
     //
     let j
     if (req.body) {
-        j = JSON.stringify(req.body)
-        res.status(200)
-        res.send(j)
+        // Request body has payload
+        let b = req.body;
+        if (b.filters) {
+            // filters key was found in the payload
+            let keys = Object.keys(b.filters)
+            if (keys.length) {
+                // Number of filters is non-zero
+                for (i = 0; i < keys.length; ++i) {
+                    let cols = b.filters[keys[i]]
+                    let s = ''
+                    if (cols.length) {
+                        s += keys[i] + ' IN ('
+                        for (j=0;j<cols.length;++j) {
+                            s += cols[j]
+                        }
+                        s += ' )'
+                        j = JSON.stringify({
+                            list : s
+                        })
+                        res.status(200)
+                        res.send(j)
+                    } else {
+                        logger.warn('No values found for filter %s', keys[i])
+                        j = JSON.stringify({
+                            err: "No values found for filter " + keys[i]
+                        })
+                        res.status(422)
+                        res.send(j)        
+                    }
+                }
+            } else {
+                // Number of filters is zero
+                j = JSON.stringify({
+                    err: "No filters found."
+                })
+                res.status(422)
+                res.send(j)
+            }
+        } else {
+            // filters key was not found in the payload
+            j = JSON.stringify({
+                err: "No filters found."
+            })
+            res.status(422)
+            res.send(j)
+        }
     } else {
-        j = JSON.stringify({})
+        // Request body was empty
+        j = JSON.stringify({
+            err: "No filters found."
+        })
         res.status(400)
         res.send(j)
     }
