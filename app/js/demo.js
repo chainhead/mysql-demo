@@ -139,17 +139,17 @@ demo.get('/regnum', (req, res, next) => {
                     list: options
                 }
                 //
-                qry.q0004(dbConn, opts, (err, resp) => {
+                qry.q0003(dbConn, opts, (err, resp) => {
                     if (err) {
-                        logger.error('Q0004 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sqlMessage)
+                        logger.error('Q0003 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sqlMessage)
                         res.status(502)
                         j = JSON.stringify({})
                         res.send(j)
                     } else {
                         if (resp.res) {
-                            logger.info('Q0004 - Request ID: %s', req.header('X-Nginx-header'))
+                            logger.info('Q0003 - Request ID: %s', req.header('X-Nginx-header'))
                         } else {
-                            logger.warn('Q0004 - Request ID: %s', req.header('X-Nginx-header'))
+                            logger.warn('Q0003 - Request ID: %s', req.header('X-Nginx-header'))
                         }
                         j = JSON.stringify({
                             r: resp.res

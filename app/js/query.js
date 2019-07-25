@@ -1,5 +1,5 @@
 //
-function q0001(dbConn, options, callback) {
+function q0000(dbConn, options, callback) {
     var q = 'SELECT 1 as Dummy';
     dbConn.query(q, (err, res, fields) => {
         if (err) {
@@ -13,7 +13,7 @@ function q0001(dbConn, options, callback) {
     })
 }
 //
-function q0002(dbConn, options, callback) {
+function q0001(dbConn, options, callback) {
     var q = 'SELECT REGISTRATION_NUM, BROKER_NAME, BROKER_TYPE, TRADE_NAME, EXCHANGE_NAME, EMAIL_ADDRESS, BROKER_ADDRESS from '
         + ' BROKERS.BROKER_DETAILS';
     dbConn.query(q, [options], (err, res, fields) => {
@@ -28,7 +28,7 @@ function q0002(dbConn, options, callback) {
     })
 }
 //
-function q0003(dbConn, options, callback) {
+function q0002(dbConn, options, callback) {
     var q = 'SELECT REGISTRATION_NUM, BROKER_NAME, BROKER_TYPE, TRADE_NAME, EXCHANGE_NAME, EMAIL_ADDRESS, BROKER_ADDRESS from '
         + ' BROKERS.BROKER_DETAILS WHERE REGISTRATION_NUM = ?';
     dbConn.query(q, [options], (err, res, fields) => {
@@ -43,7 +43,7 @@ function q0003(dbConn, options, callback) {
     })
 }
 //
-function q0004(dbConn, options, callback) {
+function q0003(dbConn, options, callback) {
     var q = 'SELECT REGISTRATION_NUM, BROKER_NAME, BROKER_TYPE, TRADE_NAME, EXCHANGE_NAME, EMAIL_ADDRESS, BROKER_ADDRESS from '
         + ' BROKERS.BROKER_DETAILS where ' + options.list;
     dbConn.query(q, [options], (err, res, fields) => {
@@ -59,8 +59,8 @@ function q0004(dbConn, options, callback) {
 }
 //
 module.exports = {
+    q0000,
     q0001,
     q0002,
-    q0003,
-    q0004
+    q0003
 }
