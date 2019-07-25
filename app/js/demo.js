@@ -1,7 +1,6 @@
 const path = require('path')
 //
 const express = require('express');
-const demoRouter = express.Router();
 //
 const moduleLogger = require('./logger')
 const MODULE = path.basename(__filename)
