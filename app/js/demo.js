@@ -1,6 +1,7 @@
 const path = require('path')
 //
 const express = require('express');
+const demo = express.Router();
 //
 const moduleLogger = require('./logger')
 const MODULE = path.basename(__filename)
@@ -10,8 +11,6 @@ const qry = require('./query')
 //
 let dbConn
 let cacheConn
-//
-const demo = express.Router()
 //
 function connSetup(conn) {
     dbConn = conn.dbConn
@@ -45,7 +44,7 @@ demo.get('/demo', (req, res, next) => {
 //
 // Get broker details of all brokers.
 // 
-demo.get('/regnum/', (req, res, next) => {
+demo.get('/regnum', (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('X-Request-Id', req.header('X-Nginx-header'))
     //
