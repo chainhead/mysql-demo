@@ -158,8 +158,6 @@ demo.get('/regnum', (req, res, next) => {
                         res.send(j)
                     }
                 })
-                res.status(200)
-                res.send(j)
             } else {
                 // Number of filters is zero
                 j = JSON.stringify({
