@@ -1,6 +1,8 @@
 # Introduction
 
-This document describes the configuration files required for this project. **DO NOT EDIT ANY FILE IN THIS FOLDER.** The files in this folder are for reference only.
+This document describes the configuration files required for this project.
+
+> **DO NOT EDIT ANY FILE IN THIS FOLDER.** The files in this folder are for reference only. They will be copied over to `$HOME/project-mysql-demo/conf` where all edits maybe done.
 
 ## Configuration files
 
@@ -13,10 +15,8 @@ Each set of configuration files is detailed below.
 
 - *Product configuration*
   - Load balancing - `nginx.conf`
-  - MySQL configuration - `msysql-config.json`
   - ProxySQL configuration - `proxysql.cfg`
-  - Redis configuration - `redis-config.json`
   - NodeJS configuration - `demo-*.json`
 - *Connection configuration*
   - MySQL connection - `mysql-connect.json`
-  - Redis connection - `redis-connect.json`
+  - Redis connection - `redis-connect.json`   (Currently, not used.)
