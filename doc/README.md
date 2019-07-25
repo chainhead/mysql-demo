@@ -58,10 +58,11 @@ openssl x509 -req -days 365 -in csr.pem -signkey server.pem -out server.crt
 Copy the certificates to a folder that Nginx can access.
 
 ```bash
-source $HOME/mysql-demo/sh/source.sh
-cp server.pen ${PROJECT_HOME}/certs
-cp server.key ${PROJECT_HOME}/certs
+cd /tmp
 chmod 404 server.*
+source $HOME/mysql-demo/sh/source.sh
+cp server.pem ${PROJECT_HOME}/certs
+cp server.key ${PROJECT_HOME}/certs
 ```
 
 ## Configuration - Nginx
@@ -143,11 +144,12 @@ This database stores the details of various brokers registered with different st
 
 ### Loading into database
 
-- Copy the file created with columns as described in the previous section to `${PROJECT_HOME}/csv/brokers.csv`.
+- Copy the file created with columns as described in the previous section to `/var/lib/mysql-files/`.
 - Run command below to load into table.
 
 ```bash
-LOAD DATA ${PROJECT_HOME}/csv/brokers.csv INTO TABLE BROKERS.BROKER_DETAILS FIELDS TERMINATED BY '|' ;
+mysql -u root -p
+LOAD DATA INFILE /var/lib/mysql-files/csv/brokers.csv IGNORE INTO TABLE BROKERS.BROKER_DETAILS FIELDS TERMINATED BY '|' ;
 ```
 
 ## Launch
