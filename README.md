@@ -4,18 +4,18 @@ Demo of a simple NodeJS API querying a MySQL back-end
 
 ## Introduction
 
-This project demonstrates a NodeJS API querying a MySQL database. These are its features:
-
-- HTTPS end-point
-- Load balancer, reverse proxy and API caching supprt for NodeJS application instances
-- Proxy server for MySQL database
-- MySQL database
-- Redis for caching query output
-- Suitable for on-premise installation
+This project demonstrates a NodeJS API querying a MySQL database. This project can be deployed on to an on-premises set-up or hosted on a VM on cloud.
 
 ## Solution components
 
-The following diagram illustrates the components of this solution.
+The following diagram illustrates the components of this solution. The complete solution is hosted on a Ubuntu 18.04 LTS `t2.meduim` virtual machine provisioned on AWS.
+
+![On-premise set-up](png/on-prem.png)
+
+- HTTPS end-point, load balancer, reverse proxy and API caching supprt for NodeJS application instances
+- Proxy server for MySQL database
+- MySQL database
+- API in NodeJS
 
 ## Installation
 
