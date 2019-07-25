@@ -105,20 +105,18 @@ demo.get('/regnum', (req, res, next) => {
             let keys = Object.keys(b.filters)
             if (keys.length) {
                 // Number of filters is non-zero
+                let options = ''
                 for (i = 0; i < keys.length; ++i) {
                     let cols = b.filters[keys[i]]
                     let s = ''
                     if (cols.length) {
                         s += keys[i] + ' IN ('
                         for (j=0;j<cols.length;++j) {
-                            s += cols[j]
+                            s += "'" + cols[j] + "',"
                         }
-                        s += ' )'
-                        j = JSON.stringify({
-                            list : s
-                        })
-                        res.status(200)
-                        res.send(j)
+                        s.slice(0,-1)
+                        s += ') AND '
+                        options += s
                     } else {
                         logger.warn('No values found for filter %s', keys[i])
                         j = JSON.stringify({
@@ -127,6 +125,12 @@ demo.get('/regnum', (req, res, next) => {
                         res.status(422)
                         res.send(j)        
                     }
+                    options = options.slice(0,-4)
+                    j = JSON.stringify({
+                        list : options
+                    })
+                    res.status(200)
+                    res.send(j)
                 }
             } else {
                 // Number of filters is zero
