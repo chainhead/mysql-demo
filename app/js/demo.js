@@ -125,11 +125,12 @@ demo.get('/regnum', (req, res, next) => {
                         res.status(422)
                         res.send(j)        
                     }
-                    options = options.slice(0,-4)
-                    j = JSON.stringify({
-                        list : options
-                    })
                 }
+                options = options.slice(0,-4)
+                j = JSON.stringify({
+                    list : options
+                })
+                //
                 res.status(200)
                 res.send(j)
             } else {
