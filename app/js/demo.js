@@ -113,33 +113,15 @@ demo.get('/regnum', (req, res, next) => {
             let keys = Object.keys(b.filters)
             if (keys.length) {
                 // Number of filters is non-zero
-                let options = ''
-                for (i = 0; i < keys.length; ++i) {
-                    let cols = b.filters[keys[i]]
-                    let s = ''
-                    if (cols.length) {
-                        s += keys[i] + ' IN ('
-                        for (j = 0; j < cols.length; ++j) {
-                            s += "'" + cols[j] + "',"
-                        }
-                        s = s.slice(0, -1)
-                        s += ') AND '
-                        options += s
-                    } else {
-                        logger.warn('No values found for filter %s', keys[i])
-                        j = JSON.stringify({
-                            err: "No values found for filter " + keys[i]
-                        })
-                        res.status(422)
-                        res.send(j)
-                    }
+                let options = {}
+                let s = ''
+                for (i=0;i<keys.length;++i) {
+                    s += "MATCH (' + keys[i] + ') AGAINST ('" + keys[keys[i]] + "' IN NATURAL LANGUAGE MODE) AND "
                 }
-                options = options.slice(0, -4)
-                let opts = {
-                    list: options
-                }
+                s = s.slice(0, -4)
+                options.match = s;
                 //
-                qry.q0003(dbConn, opts, (err, resp) => {
+                qry.q0003(dbConn, options, (err, resp) => {
                     if (err) {
                         logger.error('Q0003 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sqlMessage)
                         res.status(502)
