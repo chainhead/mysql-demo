@@ -116,7 +116,7 @@ demo.get('/regnum', (req, res, next) => {
                 let options = {}
                 let s = ''
                 for (i = 0; i < keys.length; ++i) {
-                    s += "MATCH ('" + keys[i] + "') AGAINST ('" + keys[keys[i]] + "' IN NATURAL LANGUAGE MODE) AND "
+                    s += "MATCH ('" + keys[i] + "') AGAINST ('" + keys.keys[i] + "' IN NATURAL LANGUAGE MODE) AND "
                 }
                 s = s.slice(0, -4)
                 options.match = s;
