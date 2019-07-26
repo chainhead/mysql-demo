@@ -123,7 +123,7 @@ demo.get('/regnum', (req, res, next) => {
                 //
                 qry.q0003(dbConn, options, (err, resp) => {
                     if (err) {
-                        logger.error('Q0003 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sqlMessage)
+                        logger.error('Q0003 - Request ID: %s Code: %s Number: %d SQLSTATE: %s Message: %s', req.header('X-Nginx-header'), err.code, err.errno, err.sqlState, err.sql)
                         res.status(502)
                         j = JSON.stringify({})
                         res.send(j)
