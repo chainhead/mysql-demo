@@ -10,12 +10,12 @@ This document describes the installation procedure for this project.
   - [Configuration - Nginx](#configuration---nginx)
   - [Configuration - MySQL](#configuration---mysql)
   - [Configuration - ProxySQL](#configuration---proxysql)
-  - [Configuration - Redis](#configuration---redis)
   - [Configuration - NodeJS](#configuration---nodejs)
   - [Data loading](#data-loading)
     - [Columns of CSV file](#columns-of-csv-file)
     - [Loading into database](#loading-into-database)
   - [Launch](#launch)
+  - [Logs](#logs)
 
 ## Installation
 
@@ -101,10 +101,6 @@ Set-up communication with MySQL back-end configured above.
 $HOME/mysql-demo/sh/proxy.sh
 ```
 
-## Configuration - Redis
-
-(Currently, not used.)
-
 ## Configuration - NodeJS
 
 - Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
@@ -149,7 +145,7 @@ This database stores the details of various brokers registered with different st
 
 ```bash
 mysql -u root -p
-LOAD DATA INFILE /var/lib/mysql-files/csv/brokers.csv IGNORE INTO TABLE BROKERS.BROKER_DETAILS FIELDS TERMINATED BY '|' ;
+LOAD DATA INFILE '/var/lib/mysql-files/brokers.csv' IGNORE INTO TABLE BROKERS.BROKER_DETAILS FIELDS TERMINATED BY '|' ;
 ```
 
 ## Launch
@@ -159,3 +155,8 @@ Launch application using the command below.
 ```bash
 $HOME/mysql-demo/sh/launch.sh
 ```
+
+## Logs
+
+- Request logs: `${PROJECT_HOME}/logs/access.log`
+- API logs: `${PROJECT_HOME}/logs/demo-*.log` (Replace * with 1, 2, 3 or 4.)

@@ -19,4 +19,3 @@ Each set of configuration files is detailed below.
   - NodeJS configuration - `demo-*.json`
 - *Connection configuration*
   - MySQL connection - `mysql-connect.json`
-  - Redis connection - `redis-connect.json`   (Currently, not used.)
