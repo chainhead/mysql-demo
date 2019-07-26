@@ -108,15 +108,15 @@ demo.get('/regnum', (req, res, next) => {
     if (req.body) {
         // Request body has payload
         let b = req.body;
-        if (b.filters) {
-            // filters key was found in the payload
-            let keys = Object.keys(b.filters)
+        if (b.search) {
+            // search key was found in the payload
+            let keys = Object.keys(b.search)
             if (keys.length) {
                 // Number of filters is non-zero
                 let options = {}
                 let s = ''
-                for (i=0;i<keys.length;++i) {
-                    s += "MATCH (' + keys[i] + ') AGAINST ('" + keys[keys[i]] + "' IN NATURAL LANGUAGE MODE) AND "
+                for (i = 0; i < keys.length; ++i) {
+                    s += "MATCH ('" + keys[i] + "') AGAINST ('" + keys[keys[i]] + "' IN NATURAL LANGUAGE MODE) AND "
                 }
                 s = s.slice(0, -4)
                 options.match = s;

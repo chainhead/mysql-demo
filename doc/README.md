@@ -10,7 +10,6 @@ This document describes the installation procedure for this project.
   - [Configuration - Nginx](#configuration---nginx)
   - [Configuration - MySQL](#configuration---mysql)
   - [Configuration - ProxySQL](#configuration---proxysql)
-  - [Configuration - Redis](#configuration---redis)
   - [Configuration - NodeJS](#configuration---nodejs)
   - [Data loading](#data-loading)
     - [Columns of CSV file](#columns-of-csv-file)
@@ -101,10 +100,6 @@ Set-up communication with MySQL back-end configured above.
 ```bash
 $HOME/mysql-demo/sh/proxy.sh
 ```
-
-## Configuration - Redis
-
-(Currently, not used.)
 
 ## Configuration - NodeJS
 

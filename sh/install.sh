@@ -34,10 +34,6 @@ sudo dpkg -i proxysql_2.0.5-clickhouse-ubuntu18_amd64.deb
 # 3. Start service
 sudo service proxysql start
 ##
-## Redis
-sudo apt install -y redis-server
-sudo systemctl restart redis.service
-##
 ## MySQL
 # Download .deb package
 #  This installation will use the .deb file from the MySQL website. 
