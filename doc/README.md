@@ -14,10 +14,10 @@ This document describes the installation procedure for this project.
     - [Add MySQL monitor user and password](#add-mysql-monitor-user-and-password)
     - [Add MySQL users](#add-mysql-users)
     - [Commit](#commit)
-  - [Configuration - NodeJS](#configuration---nodejs)
   - [Data loading](#data-loading)
     - [Columns of CSV file](#columns-of-csv-file)
     - [Loading into database](#loading-into-database)
+  - [Configuration - NodeJS](#configuration---nodejs)
   - [Launch](#launch)
   - [Logs](#logs)
 
@@ -98,7 +98,7 @@ mysql -u root -p < ${PROJECT_HOME}/sql/install.sql
 Launch the admin console to set-up ProxySQL.
 
 ```bash
-mysql -u admin -padmin -h 127.0.0.1 -P6032
+mysql -u admin -p -h 127.0.0.1 -P6032
 ```
 
 ### Add MySQL back-end servers
@@ -134,12 +134,9 @@ LOAD MYSQL SERVERS TO RUNTIME;
 SAVE MYSQL SERVERS TO DISK;
 LOAD MYSQL VARIABLES TO RUNTIME;
 SAVE MYSQL VARIABLES TO DISK;
+LOAD MYSQL USERS TO RUNTIME;
+SAVE MYSQL USERS TO DISK;
 ```
-
-## Configuration - NodeJS
-
-- Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
-- Edit `${PROJECT_HOME}/conf/mysql-connect-*.json` to enter passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
 
 ## Data loading
 
@@ -182,6 +179,11 @@ This database stores the details of various brokers registered with different st
 mysql -u root -p
 LOAD DATA INFILE '/var/lib/mysql-files/brokers.csv' IGNORE INTO TABLE BROKERS.BROKER_DETAILS FIELDS TERMINATED BY '|' ;
 ```
+
+## Configuration - NodeJS
+
+- Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
+- Edit `${PROJECT_HOME}/conf/mysql-connect-*.json` to enter passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
 
 ## Launch
 
