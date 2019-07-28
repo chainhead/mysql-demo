@@ -12,7 +12,6 @@ GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo2'@'localhost' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo3'@'localhost' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo4'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
-
 -- Alter user to use MySQL Native password
 -- https://github.com/mysqljs/mysql/issues/2248
 ALTER USER 'demo1'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
@@ -20,7 +19,10 @@ ALTER USER 'demo2'@'localhost' IDENTIFIED WITH mysql_native_password BY 'passwor
 ALTER USER 'demo3'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ALTER USER 'demo4'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 FLUSH PRIVILEGES;
-
+-- Monitor user
+CREATE USER 'monitor'@'localhost' IDENTIFIED BY 'password';
+GRANT USAGE ON *.* TO 'monitor'@'%';
+FLUSH PRIVILEGES;
 -- Create tables
 CREATE TABLE BROKERS.BROKER_DETAILS (
   BROKER_ADDRESS VARCHAR(256) NULL,
