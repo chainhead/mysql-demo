@@ -2,25 +2,30 @@
 CREATE SCHEMA BROKERS DEFAULT CHARACTER SET utf8 ;
 
 -- Create users for our demo
-CREATE USER 'demo1'@'localhost' IDENTIFIED BY 'password';
-CREATE USER 'demo2'@'localhost' IDENTIFIED BY 'password';
-CREATE USER 'demo3'@'localhost' IDENTIFIED BY 'password';
-CREATE USER 'demo4'@'localhost' IDENTIFIED BY 'password';
+-- 
+-- Ideally, % should be a defined address. Will struggle later.
+--
+CREATE USER 'demo1'@'%' IDENTIFIED BY 'password';
+CREATE USER 'demo2'@'%' IDENTIFIED BY 'password';
+CREATE USER 'demo3'@'%' IDENTIFIED BY 'password';
+CREATE USER 'demo4'@'%' IDENTIFIED BY 'password';
 -- Grant privileges
-GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo1'@'localhost' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo2'@'localhost' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo3'@'localhost' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo4'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo1'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo2'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo3'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON BROKERS.* TO 'demo4'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
-
 -- Alter user to use MySQL Native password
 -- https://github.com/mysqljs/mysql/issues/2248
-ALTER USER 'demo1'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-ALTER USER 'demo2'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-ALTER USER 'demo3'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-ALTER USER 'demo4'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'demo1'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'demo2'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'demo3'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'demo4'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
 FLUSH PRIVILEGES;
-
+-- Monitor user
+CREATE USER 'monitor'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'monitor'@'%';
+FLUSH PRIVILEGES;
 -- Create tables
 CREATE TABLE BROKERS.BROKER_DETAILS (
   BROKER_ADDRESS VARCHAR(256) NULL,

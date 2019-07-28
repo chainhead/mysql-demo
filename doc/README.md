@@ -10,10 +10,14 @@ This document describes the installation procedure for this project.
   - [Configuration - Nginx](#configuration---nginx)
   - [Configuration - MySQL](#configuration---mysql)
   - [Configuration - ProxySQL](#configuration---proxysql)
-  - [Configuration - NodeJS](#configuration---nodejs)
+    - [Add MySQL back-end servers](#add-mysql-back-end-servers)
+    - [Add MySQL monitor user and password](#add-mysql-monitor-user-and-password)
+    - [Add MySQL users](#add-mysql-users)
+    - [Commit](#commit)
   - [Data loading](#data-loading)
     - [Columns of CSV file](#columns-of-csv-file)
     - [Loading into database](#loading-into-database)
+  - [Configuration - NodeJS](#configuration---nodejs)
   - [Launch](#launch)
   - [Logs](#logs)
 
@@ -91,20 +95,48 @@ mysql -u root -p < ${PROJECT_HOME}/sql/install.sql
 
 ## Configuration - ProxySQL
 
-Set-up communication with MySQL back-end configured above.
-
-- Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
-- Edit `${PROJECT_HOME}/conf/proxysql.conf` to change passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
-- Run the command below.
+Launch the admin console to set-up ProxySQL.
 
 ```bash
-$HOME/mysql-demo/sh/proxy.sh
+mysql -u admin -p -h 127.0.0.1 -P6032
 ```
 
-## Configuration - NodeJS
+### Add MySQL back-end servers
 
-- Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
-- Edit `${PROJECT_HOME}/conf/mysql-connect-*.json` to enter passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
+```sql
+INSERT INTO mysql_servers(hostgroup_id,hostname,port) VALUES (1,'127.0.0.1',3306);
+```
+
+### Add MySQL monitor user and password
+
+- Change `password` below.
+
+```sql
+UPDATE global_variables SET variable_value='monitor' WHERE variable_name='mysql-monitor_username';
+UPDATE global_variables SET variable_value='password' WHERE variable_name='mysql-monitor_password';
+```
+
+### Add MySQL users
+
+- Change `password` below.
+
+```sql
+INSERT INTO mysql_users(username,password,default_hostgroup) VALUES ('demo1','password',1);
+INSERT INTO mysql_users(username,password,default_hostgroup) VALUES ('demo2','password',1);
+INSERT INTO mysql_users(username,password,default_hostgroup) VALUES ('demo3','password',1);
+INSERT INTO mysql_users(username,password,default_hostgroup) VALUES ('demo4','password',1);
+```
+
+### Commit
+
+```sql
+LOAD MYSQL SERVERS TO RUNTIME;
+SAVE MYSQL SERVERS TO DISK;
+LOAD MYSQL VARIABLES TO RUNTIME;
+SAVE MYSQL VARIABLES TO DISK;
+LOAD MYSQL USERS TO RUNTIME;
+SAVE MYSQL USERS TO DISK;
+```
 
 ## Data loading
 
@@ -114,29 +146,29 @@ At this point, the API end-point is ready for launching. However, the database i
 
 This database stores the details of various brokers registered with different stock exchanges. These details are stored in a CSV file with columns as listed below.
 
-| Sl. No. | Column Name | Description | Type | Example |
-| ------- | ----------- | ----------- | ---- | ------- |
-| 1 | Address | Address of the organisation. | Free-form text | #420, Premgali |
-| 2 | Checksum | Data check value. | 32 hexa-decimal characters | |
-| 3 | Delete flag | _Ignore_ | Text | |
-| 4 | Disbale flag | _Ignore_ | Text | |
-| 5 | E-mail | E-mail address | Text (E-mail) | somebody@somewhere.com |
-| 6 | Stock Exchange | Name of exchange where registered | Text | BSE |
-| 7 | Facebook URL | URL of Facebook page | Text (URL) | https://www.facebook.com/something |
-| 8 | FAX | FAX number of the organisation | Text (FAX number) | +91 0000 000 000 |
-| 9 | ID | Running serial number | Integer | 1 |
-| 10 | LinkedIn URL | URL of LinkedIn page | Text (URL) | https://www.linkedin.com/something |
-| 11 | Name | Name of the organisation | Text | Stock Waala Ltd. |
-| 12 | Registration Number | 12 character registration number | Text | AB123456789Z |
-| 13 | Source | _Ignore_ | Text | |
-| 14 | Telephone | Telephone number | Text (Phone number) | +91 0000 000 000 |
-| 15 | Trade Name | Name of trade | Text | Stock waala |
-| 16 | Twitter URL | URL of Twitter handle | Text (URL) | https://www.twitter.com/something |
-| 17 | Type | Type of organisation | Text | Finance |
-| 18 | Validity | From/To dates of validity | Date - Date | Apr 20, 2014 - Apr 19, 2019 or Apr 20, 2010 - Perpetual |
-| 19 | Website URL | URL of website | Text (URL) | https://something.com/ |
-| 20 | Validity From | From date of validity (derived from Validity) | Date | 2014-04-20 00:00:00 |
-| 21 | Validity To | To date of validity (derived from Validity) | Date | 2019-04-19 00:00:00 or 9999-12-31 00:00:00 |
+| Sl. No. | Column Name         | Description                                   | Type                       | Example                                                 |
+| ------- | ------------------- | --------------------------------------------- | -------------------------- | ------------------------------------------------------- |
+| 1       | Address             | Address of the organisation.                  | Free-form text             | #420, Premgali                                          |
+| 2       | Checksum            | Data check value.                             | 32 hexa-decimal characters |                                                         |
+| 3       | Delete flag         | _Ignore_                                      | Text                       |                                                         |
+| 4       | Disbale flag        | _Ignore_                                      | Text                       |                                                         |
+| 5       | E-mail              | E-mail address                                | Text (E-mail)              | somebody@somewhere.com                                  |
+| 6       | Stock Exchange      | Name of exchange where registered             | Text                       | BSE                                                     |
+| 7       | Facebook URL        | URL of Facebook page                          | Text (URL)                 | https://www.facebook.com/something                      |
+| 8       | FAX                 | FAX number of the organisation                | Text (FAX number)          | +91 0000 000 000                                        |
+| 9       | ID                  | Running serial number                         | Integer                    | 1                                                       |
+| 10      | LinkedIn URL        | URL of LinkedIn page                          | Text (URL)                 | https://www.linkedin.com/something                      |
+| 11      | Name                | Name of the organisation                      | Text                       | Stock Waala Ltd.                                        |
+| 12      | Registration Number | 12 character registration number              | Text                       | AB123456789Z                                            |
+| 13      | Source              | _Ignore_                                      | Text                       |                                                         |
+| 14      | Telephone           | Telephone number                              | Text (Phone number)        | +91 0000 000 000                                        |
+| 15      | Trade Name          | Name of trade                                 | Text                       | Stock waala                                             |
+| 16      | Twitter URL         | URL of Twitter handle                         | Text (URL)                 | https://www.twitter.com/something                       |
+| 17      | Type                | Type of organisation                          | Text                       | Finance                                                 |
+| 18      | Validity            | From/To dates of validity                     | Date - Date                | Apr 20, 2014 - Apr 19, 2019 or Apr 20, 2010 - Perpetual |
+| 19      | Website URL         | URL of website                                | Text (URL)                 | https://something.com/                                  |
+| 20      | Validity From       | From date of validity (derived from Validity) | Date                       | 2014-04-20 00:00:00                                     |
+| 21      | Validity To         | To date of validity (derived from Validity)   | Date                       | 2019-04-19 00:00:00 or 9999-12-31 00:00:00              |
 
 ### Loading into database
 
@@ -147,6 +179,11 @@ This database stores the details of various brokers registered with different st
 mysql -u root -p
 LOAD DATA INFILE '/var/lib/mysql-files/brokers.csv' IGNORE INTO TABLE BROKERS.BROKER_DETAILS FIELDS TERMINATED BY '|' ;
 ```
+
+## Configuration - NodeJS
+
+- Set environment variables with the command `source $HOME/mysql-demo/sh/source.sh`.
+- Edit `${PROJECT_HOME}/conf/mysql-connect-*.json` to enter passwords as entered in `${PROJECT_HOME}/sql/install.sql`.
 
 ## Launch
 

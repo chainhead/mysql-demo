@@ -1,6 +1,7 @@
 {
-    "socketPath" : "/var/run/mysqld/mysqld.sock",
+    "host" : "127.0.0.1",
+    "port" : 6033,
     "user" : "demo2",
-    "password" : "",
+    "password" : "password",
     "database" : "BROKERS"
 }
